@@ -30,7 +30,7 @@ public class ExportDB {
         // Connexion DB
         Class driverClass = Class.forName("org.apache.derby.jdbc.ClientDriver");
         Connection jdbcConnection = DriverManager.getConnection(
-                "jdbc:derby://localhost:1527/sample", "app", "app");
+                "jdbc:derby://localhost:1527/sample2", "APP", "APP");
         IDatabaseConnection connection = new DatabaseConnection(jdbcConnection);
         
         // Récupération noms tables
