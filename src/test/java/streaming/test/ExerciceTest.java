@@ -133,14 +133,14 @@ public class ExerciceTest {
        System.out.println("Le nombre total d'épisodes de la série Dexter");
        System.out.println(l);
     }
-//    @Test
-//    public void req15() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       long l = (long) query.getSingleResult();
-//       System.out.println("Le nombre d'épisodes de la saison 8 de la série Dexter");
-//       System.out.println(l);
-//    }
+    @Test
+    public void req15() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(ne) FROM Serie s Join s.saisons ns Join ns.episodes ne WHERE s.titre='Dexter' AND ns.id='8'");
+       long l = (long) query.getSingleResult();
+       System.out.println("Le nombre d'épisodes de la saison 8 de la série Dexter");
+       System.out.println(l);
+    }
 //    @Test
 //    public void req16() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
