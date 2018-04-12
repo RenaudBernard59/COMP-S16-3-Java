@@ -128,7 +128,7 @@ public class ExerciceTest {
     @Test
     public void req14() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-       Query query = em.createQuery("");
+       Query query = em.createQuery("SELECT COUNT(ne) FROM Serie s Join s.saisons ns Join ns.episodes ne WHERE s.titre='Dexter'");
        long l = (long) query.getSingleResult();
        System.out.println("Le nombre total d'épisodes de la série Dexter");
        System.out.println(l);
