@@ -8,6 +8,7 @@ package streaming.test;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
+import static org.juint.Assert.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.springframework.data.domain.Persistable;
@@ -54,10 +55,22 @@ public class ExerciceTest {
        
        long r = (long) query.getSingleResult();
        
+       assertEquals(1L, r);
+       
         System.out.println(r);
     }
 //    @Test
-//    public void reqX() {
+//    public void req5() {
+//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//       
+//       Query query = em.createQuery("SELECT COUNT(p.realisateurs) FROM Personne p JOIN p.film f WHERE f.real_film='Polanski'");
+//       
+//       long r = (long) query.getSingleResult();
+//       
+//       System.out.println(r);
+//    }
+//    @Test
+//    public void req6() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -66,7 +79,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req7() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -75,7 +88,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req8() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -84,7 +97,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req9() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -93,7 +106,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req10() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -102,7 +115,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req11() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -111,7 +124,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req12() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -120,7 +133,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req13() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -129,7 +142,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req14() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -138,7 +151,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req15() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -147,7 +160,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req16() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -156,7 +169,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req17() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -165,7 +178,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req18() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -174,7 +187,7 @@ public class ExerciceTest {
 //        System.out.println();
 //    }
 //    @Test
-//    public void reqX() {
+//    public void req19() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       
 //       Query query = em.createQuery("");
@@ -182,6 +195,59 @@ public class ExerciceTest {
 //       
 //        System.out.println();
 //    }
-
+//    @Test
+//    public void req20() {
+//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//       
+//       Query query = em.createQuery("");
+//       
+//       
+//        System.out.println();
+//    }
+//    @Test
+//    public void req21() {
+//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//       
+//       Query query = em.createQuery("");
+//       
+//       
+//        System.out.println();
+//    }
+//    @Test
+//    public void req22() {
+//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//       
+//       Query query = em.createQuery("");
+//       
+//       
+//        System.out.println();
+//    }
+//    @Test
+//    public void req23() {
+//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//       
+//       Query query = em.createQuery("");
+//       
+//       
+//        System.out.println();
+//    }
+//    @Test
+//    public void req24() {
+//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//       
+//       Query query = em.createQuery("");
+//       
+//       
+//        System.out.println();
+//    }
+//    @Test
+//    public void req25() {
+//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+//       
+//       Query query = em.createQuery("");
+//       
+//       
+//        System.out.println();
+//    }
 
 }
