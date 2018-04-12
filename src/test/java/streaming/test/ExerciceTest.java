@@ -65,7 +65,7 @@ public class ExerciceTest {
     public void req6() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f) FROM Film f JOIN f.acteurs a WHERE a.nom='Polanski'");
-      long l = (long) query.getSingleResult();
+       long l = (long) query.getSingleResult();
        System.out.println("Nombre de films interprétés par Polanski");
        System.out.println(l);
     }
@@ -152,19 +152,19 @@ public class ExerciceTest {
     @Test
     public void req17() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-       Query query = em.createQuery("SELECT COUNT(f) FROM Film f Join f.genre g Join f.acteurs a WHERE g.nom='Horreur' AND a.nom='Polanski'");
+       Query query = em.createQuery("SELECT COUNT(fl) FROM Film f Join f.genre g Join f.acteurs a Join f.liens fl WHERE g.nom='Horreur' AND a.nom='Polanski'");
        long l = (long) query.getSingleResult();
        System.out.println("Le nombre totals de liens pour nos films d'horreur interprétés par Polanski");
        System.out.println(l);
     }
-//    @Test
-//    public void req18() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       long l = (long) query.getSingleResult();
-//       System.out.println("Tous les films d'horreur, sauf ceux interprétés par Polanski ( utiliser UNION ou MINUS ou INTERSECT )");
-//       System.out.println(l);
-//    }
+    @Test
+    public void req18() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT f FROM Film f Join f.genre g Join f.acteurs a WHERE g.nom='Horreur' AND NOT a.nom='Polanski'");
+       Film film = (Film) query.getSingleResult();
+       System.out.println("Tous les films d'horreur, sauf ceux interprétés par Polanski ( utiliser UNION ou MINUS ou INTERSECT )");
+       System.out.println(film.getTitre());
+    }
 //    @Test
 //    public void req19() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
