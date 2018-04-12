@@ -141,14 +141,14 @@ public class ExerciceTest {
        System.out.println("Le nombre d'épisodes de la saison 8 de la série Dexter");
        System.out.println(l);
     }
-//    @Test
-//    public void req16() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       long l = (long) query.getSingleResult();
-//       System.out.println("Le nombre total de liens pour nos films policiers américains");
-//       System.out.println(l);
-//    }
+    @Test
+    public void req16() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(f) FROM Film f Join f.genre g Join f.pays p WHERE g.nom='Policier' AND p.nom='USA'");
+       long l = (long) query.getSingleResult();
+       System.out.println("Le nombre total de liens pour nos films policiers américains");
+       System.out.println(l);
+    }
 //    @Test
 //    public void req17() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
