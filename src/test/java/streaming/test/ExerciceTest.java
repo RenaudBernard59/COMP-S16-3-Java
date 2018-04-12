@@ -85,20 +85,20 @@ public class ExerciceTest {
        System.out.println("Le titre du film d'horreur anglais réalisé par roman polanski");
        System.out.println(film.getTitre());
     }
-//    @Test
-//    public void req9() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       xxx x = xxxx
-//       System.ontlnut.println("Le nomnbre de films réalisés par joel coen");
-//       System.out.println(x);
-//    }
+    @Test
+    public void req9() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("");
+       xxx x = xxxx
+       System.ont.println("Le nomnbre de films réalisés par joel coen");
+       System.out.println(x);
+    }
 //    @Test
 //    public void req10() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("nombre de films réalisés à la fois par les 2 frères coen");
+//       System.out.println("nombre de films réalisés à la fois par les 2 frères coen");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -106,7 +106,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre de films réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
+//       System.out.println("Le nombre de films réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -114,7 +114,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre de films policiers réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
+//       System.out.println("Le nombre de films policiers réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -122,7 +122,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre de saisons de la série Dexter");
+//       System.out.println("Le nombre de saisons de la série Dexter");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -130,7 +130,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre total d'épisodes de la série Dexter");
+//       System.out.println("Le nombre total d'épisodes de la série Dexter");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -138,7 +138,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre d'épisodes de la saison 8 de la série Dexter");
+//       System.out.println("Le nombre d'épisodes de la saison 8 de la série Dexter");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -146,7 +146,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre total de liens pour nos films policiers américains");
+//       System.out.println("Le nombre total de liens pour nos films policiers américains");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -154,7 +154,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre totals de liens pour nos films d'horreur interprétés par Polanski");
+//       System.out.println("Le nombre totals de liens pour nos films d'horreur interprétés par Polanski");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -162,7 +162,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Tous les films d'horreur, sauf ceux interprétés par Polanski ( utiliser UNION ou MINUS ou INTERSECT )");
+//       System.out.println("Tous les films d'horreur, sauf ceux interprétés par Polanski ( utiliser UNION ou MINUS ou INTERSECT )");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -170,7 +170,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Parmi tous les films, uniquement ceux interprétés par Polanski  ( utiliser UNION ou MINUS ou INTERSECT )");
+//       System.out.println("Parmi tous les films, uniquement ceux interprétés par Polanski  ( utiliser UNION ou MINUS ou INTERSECT )");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -178,7 +178,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Tous les films interprétés par Polanski et aussi tous les films d'horreur ( utiliser UNION ou MINUS ou INTERSECT )");
+//       System.out.println("Tous les films interprétés par Polanski et aussi tous les films d'horreur ( utiliser UNION ou MINUS ou INTERSECT )");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -186,7 +186,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre de films réalisés pour chaque genre ( GROUP BY )");
+//       System.out.println("Le nombre de films réalisés pour chaque genre ( GROUP BY )");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -194,7 +194,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre de films réalisés pour chaque réalisateur, triés par ordre croissant puis par ordre alphabétique ( GROUP BY )");
+//       System.out.println("Le nombre de films réalisés pour chaque réalisateur, triés par ordre croissant puis par ordre alphabétique ( GROUP BY )");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -202,7 +202,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre de films réalisés pour chaque réalisateur, uniquement si >= 2 ( GROUP BY et HAVING )");
+//       System.out.println("Le nombre de films réalisés pour chaque réalisateur, uniquement si >= 2 ( GROUP BY et HAVING )");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -210,7 +210,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre total de saisons pour chaque série, triés par ordre croissant de saisons, puis par ordre alphabétique.");
+//       System.out.println("Le nombre total de saisons pour chaque série, triés par ordre croissant de saisons, puis par ordre alphabétique.");
 //       System.out.println(x);
 //    }
 //    @Test
@@ -218,7 +218,7 @@ public class ExerciceTest {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
 //       xxx x = xxxx
-//       System.ontlnut.println("Le nombre total d'épisodes pour chaque série, pour peu qu'il y ait plus de 5 épisodes au total. Le tout trié par nbre d'épisodes.");
+//       System.out.println("Le nombre total d'épisodes pour chaque série, pour peu qu'il y ait plus de 5 épisodes au total. Le tout trié par nbre d'épisodes.");
 //       System.out.println(x);
 //    }
 
