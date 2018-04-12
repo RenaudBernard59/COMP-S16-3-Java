@@ -125,101 +125,101 @@ public class ExerciceTest {
        System.out.println("Le nombre de saisons de la série Dexter");
        System.out.println(l);
     }
-//    @Test
-//    public void req14() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       xxx x = xxxx
-//       System.out.println("Le nombre total d'épisodes de la série Dexter");
-//       System.out.println(x);
-//    }
+    @Test
+    public void req14() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("");
+       long l = (long) query.getSingleResult();
+       System.out.println("Le nombre total d'épisodes de la série Dexter");
+       System.out.println(l);
+    }
 //    @Test
 //    public void req15() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre d'épisodes de la saison 8 de la série Dexter");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req16() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre total de liens pour nos films policiers américains");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req17() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre totals de liens pour nos films d'horreur interprétés par Polanski");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req18() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Tous les films d'horreur, sauf ceux interprétés par Polanski ( utiliser UNION ou MINUS ou INTERSECT )");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req19() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Parmi tous les films, uniquement ceux interprétés par Polanski  ( utiliser UNION ou MINUS ou INTERSECT )");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req20() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Tous les films interprétés par Polanski et aussi tous les films d'horreur ( utiliser UNION ou MINUS ou INTERSECT )");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req21() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre de films réalisés pour chaque genre ( GROUP BY )");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req22() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre de films réalisés pour chaque réalisateur, triés par ordre croissant puis par ordre alphabétique ( GROUP BY )");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req23() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre de films réalisés pour chaque réalisateur, uniquement si >= 2 ( GROUP BY et HAVING )");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req24() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre total de saisons pour chaque série, triés par ordre croissant de saisons, puis par ordre alphabétique.");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 //    @Test
 //    public void req25() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
 //       Query query = em.createQuery("");
-//       xxx x = xxxx
+//       long l = (long) query.getSingleResult();
 //       System.out.println("Le nombre total d'épisodes pour chaque série, pour peu qu'il y ait plus de 5 épisodes au total. Le tout trié par nbre d'épisodes.");
-//       System.out.println(x);
+//       System.out.println(l);
 //    }
 
 }
