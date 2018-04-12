@@ -77,14 +77,14 @@ public class ExerciceTest {
        System.out.println("Nombre de films à la fois interprétés et réalisés par polanski");
        System.out.println(r);
     }
-//    @Test
-//    public void req8() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       xxx x = xxxx
-//       System.ontlnut.println("Le titre du film d'horreur anglais réalisé par roman polanski");
-//       System.out.println(x);
-//    }
+    @Test
+    public void req8() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT f FROM Film f JOIN f.realisateurs r JOIN f.pays p WHERE r.nom='Polanski' AND p.nom='USA' OR p.nom='UK'");
+       Film film = (Film) query.getSingleResult();
+       System.out.println("Le titre du film d'horreur anglais réalisé par roman polanski");
+       System.out.println(film.getTitre());
+    }
 //    @Test
 //    public void req9() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
