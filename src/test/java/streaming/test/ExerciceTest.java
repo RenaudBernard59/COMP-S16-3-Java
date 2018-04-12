@@ -173,14 +173,14 @@ public class ExerciceTest {
        System.out.println("Parmi tous les films, uniquement ceux interprétés par Polanski  ( utiliser UNION ou MINUS ou INTERSECT )");
        System.out.println(film.getTitre());
     }
-//    @Test
-//    public void req20() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       long l = (long) query.getSingleResult();
-//       System.out.println("Tous les films interprétés par Polanski et aussi tous les films d'horreur ( utiliser UNION ou MINUS ou INTERSECT )");
-//       System.out.println(l);
-//    }
+    @Test
+    public void req20() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT f FROM Film f Join f.acteurs a Join f.genre g WHERE a.nom='Polanski' AND g.nom='Horreur'");
+       Film film = (Film) query.getSingleResult();
+       System.out.println("Tous les films interprétés par Polanski et aussi tous les films d'horreur ( utiliser UNION ou MINUS ou INTERSECT )");
+       System.out.println(film.getTitre());
+    }
 //    @Test
 //    public void req21() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
