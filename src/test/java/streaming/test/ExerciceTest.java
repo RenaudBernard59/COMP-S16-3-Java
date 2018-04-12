@@ -5,6 +5,8 @@
  */
 package streaming.test;
 
+import java.util.ArrayList;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
@@ -181,14 +183,15 @@ public class ExerciceTest {
        System.out.println("Tous les films interprétés par Polanski et aussi tous les films d'horreur ( utiliser UNION ou MINUS ou INTERSECT )");
        System.out.println(film.getTitre());
     }
-//    @Test
-//    public void req21() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       long l = (long) query.getSingleResult();
-//       System.out.println("Le nombre de films réalisés pour chaque genre ( GROUP BY )");
-//       System.out.println(l);
-//    }
+    @Test
+    public void req21() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(fgf) FROM Film f Join f.genre fg Join fg.films fgf GROUP BY fg.id");
+       ArrayList<Long> al;
+       al = (ArrayList<Long>) query.getResultList();
+       System.out.println("Le nombre de films réalisés pour chaque genre ( GROUP BY )");
+       System.out.println(al);
+    }
 //    @Test
 //    public void req22() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
