@@ -88,10 +88,10 @@ public class ExerciceTest {
     @Test
     public void req9() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-       Query query = em.createQuery("");
-       xxx x = xxxx
-       System.ont.println("Le nomnbre de films réalisés par joel coen");
-       System.out.println(x);
+       Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r WHERE r.nom='Coen'");
+       long r = (long) query.getSingleResult();
+       System.out.println("Le nombre de films réalisés par joel coen");
+       System.out.println(r);
     }
 //    @Test
 //    public void req10() {
