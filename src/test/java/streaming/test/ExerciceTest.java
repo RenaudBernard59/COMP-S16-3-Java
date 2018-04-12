@@ -149,14 +149,14 @@ public class ExerciceTest {
        System.out.println("Le nombre total de liens pour nos films policiers américains");
        System.out.println(l);
     }
-//    @Test
-//    public void req17() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       long l = (long) query.getSingleResult();
-//       System.out.println("Le nombre totals de liens pour nos films d'horreur interprétés par Polanski");
-//       System.out.println(l);
-//    }
+    @Test
+    public void req17() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(f) FROM Film f Join f.genre g Join f.acteurs a WHERE g.nom='Horreur' AND a.nom='Polanski'");
+       long l = (long) query.getSingleResult();
+       System.out.println("Le nombre totals de liens pour nos films d'horreur interprétés par Polanski");
+       System.out.println(l);
+    }
 //    @Test
 //    public void req18() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
