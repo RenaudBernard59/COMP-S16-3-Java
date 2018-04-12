@@ -37,15 +37,15 @@ public class ExerciceTest {
        
        System.out.println(r);
     }
-//    @Test
-//    public void reqX() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       
-//       Query query = em.createQuery("");
-//       
-//       
-//        System.out.println();
-//    }
+    @Test
+    public void reqX() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       
+       Query query = em.createQuery("SELECT MIN(f.annee) FROM Film f");
+       int i = (int) query.getSingleResult();
+       
+        System.out.println(i);
+    }
 //    @Test
 //    public void reqX() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
