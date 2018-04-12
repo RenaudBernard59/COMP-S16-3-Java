@@ -8,7 +8,7 @@ package streaming.test;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import javax.persistence.Query;
-import static org.juint.Assert.*;
+import static org.junit.Assert.*;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.springframework.data.domain.Persistable;
@@ -59,16 +59,16 @@ public class ExerciceTest {
        
         System.out.println(r);
     }
-//    @Test
-//    public void req5() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       
-//       Query query = em.createQuery("SELECT COUNT(p.realisateurs) FROM Personne p JOIN p.film f WHERE f.real_film='Polanski'");
-//       
-//       long r = (long) query.getSingleResult();
-//       
-//       System.out.println(r);
-//    }
+    @Test
+    public void req5() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       
+       Query query = em.createQuery("SELECT COUNT(f) FROM Film f JOIN f.realisateurs r WHERE r.nom='Polanski'");
+       
+       long r = (long) query.getSingleResult();
+       
+       System.out.println(r);
+    }
 //    @Test
 //    public void req6() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
