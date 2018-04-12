@@ -117,14 +117,14 @@ public class ExerciceTest {
        System.out.println("Le nombre de films policiers réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
        System.out.println(l);
     }
-//    @Test
-//    public void req13() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       xxx x = xxxx
-//       System.out.println("Le nombre de saisons de la série Dexter");
-//       System.out.println(x);
-//    }
+    @Test
+    public void req13() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(ns) FROM Serie s Join s.saisons ns WHERE s.titre='Dexter'");;
+       long l = (long) query.getSingleResult();
+       System.out.println("Le nombre de saisons de la série Dexter");
+       System.out.println(l);
+    }
 //    @Test
 //    public void req14() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
