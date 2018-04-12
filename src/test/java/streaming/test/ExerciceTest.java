@@ -31,9 +31,9 @@ public class ExerciceTest {
     public void req2() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f) FROM Film f");
-       long r = (long) query.getSingleResult();
+       long l = (long) query.getSingleResult();
        System.out.println("Vérifier le nombre de films");
-       System.out.println(r);
+       System.out.println(l);
     }
     @Test
     public void req3() {
@@ -48,34 +48,34 @@ public class ExerciceTest {
     public void req4() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(l) FROM Lien l JOIN l.film f WHERE f.titre='Big Lebowski (The)'");
-       long r = (long) query.getSingleResult();
-       assertEquals(1L, r);
+       long l = (long) query.getSingleResult();
+       assertEquals(1L, l);
        System.out.println("Nombre de liens du film 'Big Lebowski (The)'");
-       System.out.println(r);
+       System.out.println(l);
     }
     @Test
     public void req5() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f) FROM Film f JOIN f.realisateurs r WHERE r.nom='Polanski'");
-       long r = (long) query.getSingleResult();
+       long l = (long) query.getSingleResult();
        System.out.println("Nombre de films réalisés par Polanski");
-       System.out.println(r);
+       System.out.println(l);
     }
     @Test
     public void req6() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f) FROM Film f JOIN f.acteurs a WHERE a.nom='Polanski'");
-      long r = (long) query.getSingleResult();
+      long l = (long) query.getSingleResult();
        System.out.println("Nombre de films interprétés par Polanski");
-       System.out.println(r);
+       System.out.println(l);
     }
     @Test
     public void req7() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f) FROM Film f JOIN f.realisateurs r JOIN f.acteurs a WHERE r.nom='Polanski' AND a.nom='Polanski'");
-       long r = (long) query.getSingleResult();
+       long l = (long) query.getSingleResult();
        System.out.println("Nombre de films à la fois interprétés et réalisés par polanski");
-       System.out.println(r);
+       System.out.println(l);
     }
     @Test
     public void req8() {
@@ -89,34 +89,34 @@ public class ExerciceTest {
     public void req9() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r WHERE r.nom='Coen' AND r.prenom='Joel' ");
-       long r = (long) query.getSingleResult();
+       long l = (long) query.getSingleResult();
        System.out.println("Le nombre de films réalisés par joel coen");
-       System.out.println(r);
+       System.out.println(l);
     }
     @Test
     public void req10() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r WHERE r.nom='Coen' AND r.prenom='Joel' AND r.prenom='Ethan'");
-       long r = (long) query.getSingleResult();
+       long l = (long) query.getSingleResult();
        System.out.println("nombre de films réalisés à la fois par les 2 frères coen");
-       System.out.println(r);
+       System.out.println(l);
     }
     @Test
     public void req11() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r JOIN f.acteurs a WHERE r.nom='Coen' AND r.prenom='Joel' AND r.prenom='Ethan' AND a.nom='Buscemi' AND a.prenom='Steve'");
-       long r = (long) query.getSingleResult();
+       long l = (long) query.getSingleResult();
        System.out.println("Le nombre de films réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
-       System.out.println(r);
-//    }
-//    @Test
-//    public void req12() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       xxx x = xxxx
-//       System.out.println("Le nombre de films policiers réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
-//       System.out.println(x);
-//    }
+       System.out.println(l);
+    }
+    @Test
+    public void req12() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("");
+       long l = (long) query.getSingleResult();
+       System.out.println("Le nombre de films policiers réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
+       System.out.println(l);
+    }
 //    @Test
 //    public void req13() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
