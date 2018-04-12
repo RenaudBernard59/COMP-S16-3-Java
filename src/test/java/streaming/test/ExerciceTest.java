@@ -61,14 +61,14 @@ public class ExerciceTest {
        System.out.println("Nombre de films réalisés par Polanski");
        System.out.println(r);
     }
-//    @Test
-//    public void req6() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-///       xxx x = xxxx
-//       System.out.println("Nombre de films interprétés par Polanski");
-//       System.out.println(x);
-//    }
+    @Test
+    public void req6() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(f) FROM Film f JOIN f.acteurs a WHERE a.nom='Polanski'");
+      long r = (long) query.getSingleResult();
+       System.out.println("Nombre de films interprétés par Polanski");
+       System.out.println(r);
+    }
 //    @Test
 //    public void req7() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
