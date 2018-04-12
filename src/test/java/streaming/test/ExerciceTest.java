@@ -44,7 +44,7 @@ public class ExerciceTest {
        
        Query query = em.createQuery("SELECT MIN(f.annee) FROM Film f");
        int i = (int) query.getSingleResult();
-       
+       assertEquals(1968,i);
         System.out.println(i);
     }
     @Test
