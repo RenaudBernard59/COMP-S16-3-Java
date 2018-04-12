@@ -101,13 +101,13 @@ public class ExerciceTest {
        System.out.println("nombre de films réalisés à la fois par les 2 frères coen");
        System.out.println(r);
     }
-//    @Test
-//    public void req11() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       xxx x = xxxx
-//       System.out.println("Le nombre de films réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
-//       System.out.println(x);
+    @Test
+    public void req11() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r JOIN f.acteurs a WHERE r.nom='Coen' AND r.prenom='Joel' AND r.prenom='Ethan' AND a.nom='Buscemi' AND a.prenom='Steve'");
+       long r = (long) query.getSingleResult();
+       System.out.println("Le nombre de films réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
+       System.out.println(r);
 //    }
 //    @Test
 //    public void req12() {
