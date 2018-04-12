@@ -88,19 +88,19 @@ public class ExerciceTest {
     @Test
     public void req9() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-       Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r WHERE r.nom='Coen'");
+       Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r WHERE r.nom='Coen' AND r.prenom='Joel' ");
        long r = (long) query.getSingleResult();
        System.out.println("Le nombre de films réalisés par joel coen");
        System.out.println(r);
     }
-//    @Test
-//    public void req10() {
-//       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-//       Query query = em.createQuery("");
-//       xxx x = xxxx
-//       System.out.println("nombre de films réalisés à la fois par les 2 frères coen");
-//       System.out.println(x);
-//    }
+    @Test
+    public void req10() {
+       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+       Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r WHERE r.nom='Coen' AND r.prenom='Joel' AND r.prenom='Ethan'");
+       long r = (long) query.getSingleResult();
+       System.out.println("nombre de films réalisés à la fois par les 2 frères coen");
+       System.out.println(r);
+    }
 //    @Test
 //    public void req11() {
 //       EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
