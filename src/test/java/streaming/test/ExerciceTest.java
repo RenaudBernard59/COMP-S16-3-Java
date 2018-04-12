@@ -112,7 +112,7 @@ public class ExerciceTest {
     @Test
     public void req12() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-       Query query = em.createQuery("");
+       Query query = em.createQuery("SELECT COUNT(f) FROM Film f JOIN f.realisateurs r JOIN f.acteurs a JOIN f.genre g WHERE r.nom='Coen' AND r.prenom='Joel' AND r.prenom='Ethan' AND a.nom='Buscemi' AND a.prenom='Steve' AND g.nom='Policier'");
        long l = (long) query.getSingleResult();
        System.out.println("Le nombre de films policiers réalisés à la fois par les 2 frères Coen, et interprétés par Steve Buscemi");
        System.out.println(l);
