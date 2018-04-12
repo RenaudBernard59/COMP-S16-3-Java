@@ -31,10 +31,11 @@ public class ExerciceTest {
     public void req2() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        
-       Query query = em.createQuery("");
+       Query query = em.createQuery("SELECT COUNT(f) FROM Film f");
        
+       long r = (long) query.getSingleResult();
        
-        System.out.println();
+       System.out.println(r);
     }
 //    @Test
 //    public void reqX() {
