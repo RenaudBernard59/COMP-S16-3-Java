@@ -97,6 +97,7 @@ public class ExerciceTest {
     public void req9() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
        Query query = em.createQuery("SELECT COUNT(f)FROM Film f JOIN f.realisateurs r WHERE r.nom='Coen' AND r.prenom='Joel' ");
+       // SELECT COUNT(f) FROM Film f Join f.real r Join f.real r Pour Ethan 
        long l = (long) query.getSingleResult();
        assertEquals(2L, l);
        System.out.println("Le nombre de films réalisés par joel coen");
@@ -204,12 +205,14 @@ public class ExerciceTest {
     @Test
     public void req21() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-       Query query = em.createQuery("SELECT g.nom gn COUNT(f) cf FROM Film f Join f.genre g GROUP BY g");
-       List al = query.getResultList();
-       Object[] tableau = al.get();
-       //assertEquals(0L, l);
+       Query query = em.createQuery("SELECT g.nom, COUNT(f) FROM Genre g JOIN g.films f GROUP BY g");
+       List<Object[]> al = query.getResultList();
        System.out.println("Le nombre de films réalisés pour chaque genre ( GROUP BY )");
-       System.out.println(tableau);
+       for (Object[] tab: al){
+           String nomGenre = (String) tab[0];
+           long nbFilms = (long) tab[1];
+           System.out.println(nomGenre + " " + nbFilms);
+       }
     }
 //    @Test
 //    public void req22() {
