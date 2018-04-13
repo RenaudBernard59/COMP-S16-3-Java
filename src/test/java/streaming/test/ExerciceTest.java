@@ -186,11 +186,11 @@ public class ExerciceTest {
     @Test
     public void req21() {
        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
-       Query query = em.createQuery("SELECT COUNT(fgf) FROM Film f Join f.genre fg Join fg.films fgf GROUP BY fg.id");
-       ArrayList<Long> al;
-       al = (ArrayList<Long>) query.getResultList();
+       Query query = em.createQuery("SELECT g.nom gn COUNT(f) cf FROM Film f Join f.genre g GROUP BY g");
+       List al = query.getResultList();
+       Object[] tableau = al.get();
        System.out.println("Le nombre de films réalisés pour chaque genre ( GROUP BY )");
-       System.out.println(al);
+       System.out.println(tableau);
     }
 //    @Test
 //    public void req22() {
