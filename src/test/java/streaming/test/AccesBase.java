@@ -44,7 +44,16 @@ public class AccesBase {
         
         
         em.getTransaction().commit();
-        
     }
-    
+    @Test
+    public void ajouterGenreSF() {
+        EntityManager em = Persistence.createEntityManagerFactory("PU").createEntityManager();
+        em.getTransaction().begin();
+        Genre g = new Genre();
+        
+        g.setId(Long.MIN_VALUE);
+        g.setNom("Science Fiction");
+        em.persist(g);
+        em.getTransaction().commit();
+    }
 }
