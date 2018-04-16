@@ -32,6 +32,14 @@ public class Film implements Serializable {
     @ManyToOne
     @JoinColumn(name = "GENRE_ID")
     private Genre genre;
+
+    public Genre getGenre() {
+        return genre;
+    }
+
+    public void setGenre(Genre genre) {
+        this.genre = genre;
+    }
     
     private String titre;
     private String synopsis;
